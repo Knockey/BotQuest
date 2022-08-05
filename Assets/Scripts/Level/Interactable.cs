@@ -18,5 +18,13 @@ public abstract class Interactable : MonoBehaviour
             OnInteraction(player);
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent(out Player player))
+            OnZoneExit(player);
+    }
+
     public abstract void OnInteraction(Player player);
+    public virtual void OnZoneExit(Player player) { }
+
 }
