@@ -5,6 +5,7 @@ using UnityEngine;
 public class AccepterView : MonoBehaviour
 {
     [SerializeField] private SlotView _slotView;
+    [SerializeField] private GameObject _floorMarker;
 
     public SlotView CurrentSlotView { get; private set; }
 
@@ -14,6 +15,7 @@ public class AccepterView : MonoBehaviour
         {
             CreateSlotView(slot);
         }
+        _floorMarker.SetActive(true);
     }
 
     public void CreateSlotView(Slot slot)
@@ -21,15 +23,5 @@ public class AccepterView : MonoBehaviour
         CurrentSlotView = Instantiate(_slotView, transform);
 
         CurrentSlotView.Init(slot);
-    }
-
-    private void ShowSlotView()
-    {
-        enabled = true;
-    }
-
-    private void HideSlotView()
-    {
-        enabled = false;
     }
 }
