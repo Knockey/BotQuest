@@ -15,6 +15,7 @@ public class AccepterView : MonoBehaviour
         {
             CreateSlotView(slot);
         }
+
         _floorMarker.SetActive(true);
     }
 

@@ -18,6 +18,8 @@ public class Dispencer : Interactable
     {
         if (_putingCoroutine != null)
             StopCoroutine(_putingCoroutine);
+
+        player.uITimer.StopCount();
     }
 
     private Pickable GetPickable()
@@ -29,7 +31,10 @@ public class Dispencer : Interactable
 
     private IEnumerator Puting(Player player)
     {
-        yield return new WaitForSeconds(0.8f);
+        int delay = Random.Range(0, 4);
+        player.uITimer.StartCount(delay);
+
+        yield return new WaitForSeconds(delay);
 
         player.backPack.TryPutIn(GetPickable());
     }

@@ -9,6 +9,8 @@ public class Accepter : Interactable
     [SerializeField] private Slot[] _slots;
     [SerializeField] private AccepterView _accepterView;
 
+    private Coroutine _placingCoroutine;
+
     public bool IsActive { get; private set; }
     public bool IsCompleted { get; private set; }
 
@@ -28,8 +30,14 @@ public class Accepter : Interactable
 
     public override void OnInteraction(Player player)
     {
-        if (CanInteract(player) && player.backPack.TryGetPickable(out Pickable pickable))
-            TryPlace(pickable);
+        if (CanInteract(player))
+            _placingCoroutine = StartCoroutine(Placing(player));
+    }
+
+    public override void OnZoneExit(Player player)
+    {
+        StopCoroutine(_placingCoroutine);
+        player.uITimer.StopCount();
     }
 
     public bool IsFull()
@@ -88,5 +96,17 @@ public class Accepter : Interactable
     private bool IsSlotHasSpace(Slot slot, Type type)
     {
         return slot.type == type && slot.isFull == false;
+    }
+
+     private IEnumerator Placing(Player player)
+    {
+        int delay = UnityEngine.Random.Range(0, 4);
+        player.uITimer.StartCount(delay);
+
+        yield return new WaitForSeconds(delay);
+        Debug.Log("hi");
+
+        if (player.backPack.TryGetPickable(out Pickable pickable))
+            TryPlace(pickable);
     }
 }
