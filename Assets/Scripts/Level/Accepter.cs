@@ -45,7 +45,7 @@ public class Accepter : Interactable
         return _slots.FirstOrDefault(slot => slot.isFull == false) == default;
     }
 
-    public List<Type> GetIncompleteSlotTypes()
+    public List<PickableType> GetIncompleteSlotTypes()
     {
         var types = _slots.ToList().FindAll(slot => slot.isFull == false).ToList().ConvertAll(slot => slot.type);
 
@@ -76,14 +76,14 @@ public class Accepter : Interactable
         }
     }
 
-    private bool CanPlace(Type type, out Slot slot)
+    private bool CanPlace(PickableType type, out Slot slot)
     {
         slot = _slots.FirstOrDefault(slot => IsSlotHasSpace(slot, type));
 
         return slot != default;
     }
 
-    public bool CanPlace(Type type)
+    public bool CanPlace(PickableType type)
     {
         return _slots.FirstOrDefault(slot => IsSlotHasSpace(slot, type)) != default;
     }
@@ -93,7 +93,7 @@ public class Accepter : Interactable
         return IsActive && player.backPack.HasPickable && CanPlace(player.backPack.lastPickableType);
     }
 
-    private bool IsSlotHasSpace(Slot slot, Type type)
+    private bool IsSlotHasSpace(Slot slot, PickableType type)
     {
         return slot.type == type && slot.isFull == false;
     }

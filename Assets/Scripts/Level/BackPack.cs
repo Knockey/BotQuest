@@ -10,7 +10,7 @@ public class BackPack : MonoBehaviour
     private int _counter;
     public bool IsFull => _counter >= Capacity;
     public bool HasPickable => _pickables.Count > 0;
-    public Type lastPickableType => _pickables[_pickables.Count - 1].type;
+    public PickableType lastPickableType => _pickables[_pickables.Count - 1].type;
 
     private const int Capacity = 1;
 

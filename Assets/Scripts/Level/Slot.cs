@@ -8,7 +8,7 @@ public class Slot
     [SerializeField] private Pickable _pickable;
     [SerializeField] private int _capacity;
 
-    public Type type => _pickable.type;
+    public PickableType type => _pickable.type;
     public Sprite sprite => _pickable.pickableUI.sprite;
     public int capcity => _capacity;
     public int freeSpace => _capacity - currentAmount;
