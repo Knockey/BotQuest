@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private BackPack _backPack;
+    [SerializeField] private BackPack _backpack;
     [SerializeField] private UITimer _uiTimer;
 
-    public BackPack backPack => _backPack;
-    public UITimer uITimer => _uiTimer;
+    public BackPack Backpack => _backpack;
+    public UITimer UITimer => _uiTimer;
 }
