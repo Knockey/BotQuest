@@ -945,27 +945,6 @@ Transform:
   m_Father: {fileID: 869321004}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &692969258 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 637877834741327683, guid: 015069d9045e7ca438cd873e06995112, type: 3}
-  m_PrefabInstance: {fileID: 449151395}
-  m_PrefabAsset: {fileID: 0}
---- !u!208 &692969263
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692969258}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!4 &702444969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4066741573924226645, guid: 313da6a8edf026546b0e0c7dfc72e89d, type: 3}
@@ -1210,6 +1189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 860943487}
+  - component: {fileID: 860943488}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -1237,6 +1217,25 @@ Transform:
   m_Father: {fileID: 543450652469309279}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &860943488
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860943486}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 671c3f7d3dcbdbe4c9061267a2229731, type: 3}
+  m_Controller: {fileID: 9100000, guid: c24fb8b26cf488d45ab7c1412e514e2a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &869321003
 GameObject:
   m_ObjectHideFlags: 0
@@ -1365,13 +1364,15 @@ MonoBehaviour:
       parentIndex: 
       startIndex: 
       variableStartIndex: 
-      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(652.5,120)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(2.5,120)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-9.753651,159.071686)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-570.000732,240)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-336.628784,158.757935)"},"ID":4,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"GetNewDispencerDestination","NodeData":{"Offset":"(-134.921661,152.533112)"},"ID":5,"Name":"Get
-        New Dispencer Destination","Instant":true,"SharedAcceptorHandlerAcceptorsHandler":{"Type":"SharedAcceptorHandler","Name":"_acceptorHandler","IsShared":true,"AcceptorHandlermValue":0},"SharedDispencersListDispancersList":{"Type":"SharedDispencersList","Name":"_dispencersList","IsShared":true,"List`1mValue":[1,2,3]},"SharedDispencerCurrentDispancer":{"Type":"SharedDispencer","Name":"_currentDispencer","IsShared":true}},{"Type":"SetNewDispencerDestination","NodeData":{"Offset":"(138.3331,149.160217)"},"ID":6,"Name":"Set
-        New Dispencer Destination","Instant":true,"SharedDispencerCurrentDispancer":{"Type":"SharedDispencer","Name":"_currentDispencer","IsShared":true},"SharedNavMeshAgentNavMeshAgent":{"Type":"SharedNavMeshAgent","Name":"_navMeshAgent","IsShared":true,"NavMeshAgentmValue":4}},{"Type":"IsEnterIntoDispencerZone","NodeData":{"Offset":"(356.7442,154.023865)"},"ID":7,"Name":"Is
-        Enter Into Dispencer Zone","Instant":true,"SharedDispencerCurrentDispancer":{"Type":"SharedDispencer","Name":"_currentDispencer","IsShared":true},"SharedFloatWaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(14.9265137,246.3634)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-53.3268547,145.384155)"},"ID":9,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"GetNewAcceptorDestination","NodeData":{"Offset":"(139.108,154.444519)"},"ID":10,"Name":"Get
-        New Acceptor Destination","Instant":true,"SharedAcceptorHandlerAcceptorsHandler":{"Type":"SharedAcceptorHandler","Name":"_acceptorHandler","IsShared":true,"AcceptorHandlermValue":5},"SharedAcceptorCurrentAcceptor":{"Type":"SharedAcceptor","Name":"_currentAcceptor","IsShared":true}},{"Type":"SetNewAcceptorDestination","NodeData":{"Offset":"(392.071,144.444473)"},"ID":11,"Name":"Set
-        New Acceptor Destination","Instant":true,"SharedAcceptorCurrentAcceptor":{"Type":"SharedAcceptor","Name":"_currentAcceptor","IsShared":true},"SharedNavMeshAgentNavMeshAgent":{"Type":"SharedNavMeshAgent","Name":"_navMeshAgent","IsShared":true,"NavMeshAgentmValue":6}},{"Type":"IsEnterIntoAcceptorZone","NodeData":{"Offset":"(613.151733,141.59613)"},"ID":12,"Name":"Is
-        Enter Into Acceptor Zone","Instant":true,"SharedAcceptorCurrentAcceptor":{"Type":"SharedAcceptor","Name":"_currentAcceptor","IsShared":true},"SharedFloatWaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(940.7625,399.573853)"},"ID":13,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0.1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]}]},"Variables":[{"Type":"SharedAcceptorHandler","Name":"_acceptorHandler","IsShared":true,"AcceptorHandlermValue":7},{"Type":"SharedAcceptor","Name":"_currentAcceptor","IsShared":true},{"Type":"SharedNavMeshAgent","Name":"_navMeshAgent","IsShared":true,"NavMeshAgentmValue":8},{"Type":"SharedDispencersList","Name":"_dispencersList","IsShared":true,"List`1mValue":[9,10,11]},{"Type":"SharedDispencer","Name":"_currentDispencer","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0}]}'
+      JSONSerialization: '{"EntryTask":{"Type":"BehaviorDesigner.Runtime.Tasks.EntryTask","NodeData":{"Offset":"(652.5,120)"},"ID":0,"Name":"Entry","Instant":true},"RootTask":{"Type":"BehaviorDesigner.Runtime.Tasks.Repeater","NodeData":{"Offset":"(2.5,120)"},"ID":1,"Name":"Repeater","Instant":true,"SharedIntcount":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":0},"SharedBoolrepeatForever":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolendOnFailure":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Selector","NodeData":{"Offset":"(-9.753651,159.071686)"},"ID":2,"Name":"Selector","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(-570,240)"},"ID":3,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-336.628784,158.757935)"},"ID":4,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"GetNewDispencerDestination","NodeData":{"Offset":"(-134.921661,152.533112)"},"ID":5,"Name":"Get
+        New Dispencer Destination","Instant":true,"SharedAcceptorHandlerAcceptorsHandler":{"Type":"SharedAcceptorHandler","Name":"_acceptorHandler","IsShared":true,"AcceptorHandlermValue":0},"SharedDispencersListDispancersList":{"Type":"SharedDispencersList","Name":"_dispencersList","IsShared":true,"List`1mValue":[1,2,3]},"SharedDispencerCurrentDispancer":{"Type":"SharedDispencer","Name":"_currentDispencer","IsShared":true},"SharedBackpackBackpack":{"Type":"SharedBackpack","Name":"_backpack","IsShared":true,"BackPackmValue":4}},{"Type":"SetNewDispencerDestination","NodeData":{"Offset":"(138.3331,149.160217)"},"ID":6,"Name":"Set
+        New Dispencer Destination","Instant":true,"SharedDispencerCurrentDispancer":{"Type":"SharedDispencer","Name":"_currentDispencer","IsShared":true},"SharedNavMeshAgentNavMeshAgent":{"Type":"SharedNavMeshAgent","Name":"_navMeshAgent","IsShared":true,"NavMeshAgentmValue":5}},{"Type":"IsEnterIntoDispencerZone","NodeData":{"Offset":"(356.7442,154.023865)"},"ID":7,"Name":"Is
+        Enter Into Dispencer Zone","Instant":true,"SharedDispencerCurrentDispancer":{"Type":"SharedDispencer","Name":"_currentDispencer","IsShared":true},"SharedFloatWaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(90,250)"},"ID":8,"Name":"Sequence","Instant":true,"AbortTypeabortType":"LowerPriority","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(-53.3268547,145.384155)"},"ID":9,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"GetNewAcceptorDestination","NodeData":{"Offset":"(139.108,154.444519)"},"ID":10,"Name":"Get
+        New Acceptor Destination","Instant":true,"SharedAcceptorHandlerAcceptorsHandler":{"Type":"SharedAcceptorHandler","Name":"_acceptorHandler","IsShared":true,"AcceptorHandlermValue":6},"SharedAcceptorCurrentAcceptor":{"Type":"SharedAcceptor","Name":"_currentAcceptor","IsShared":true},"SharedBackpackBackpack":{"Type":"SharedBackpack","Name":"_backpack","IsShared":true,"BackPackmValue":7}},{"Type":"SetNewAcceptorDestination","NodeData":{"Offset":"(392.071,144.444473)"},"ID":11,"Name":"Set
+        New Acceptor Destination","Instant":true,"SharedAcceptorCurrentAcceptor":{"Type":"SharedAcceptor","Name":"_currentAcceptor","IsShared":true},"SharedNavMeshAgentNavMeshAgent":{"Type":"SharedNavMeshAgent","Name":"_navMeshAgent","IsShared":true,"NavMeshAgentmValue":8}},{"Type":"IsEnterIntoAcceptorZone","NodeData":{"Offset":"(613.151733,141.59613)"},"ID":12,"Name":"Is
+        Enter Into Acceptor Zone","Instant":true,"SharedAcceptorCurrentAcceptor":{"Type":"SharedAcceptor","Name":"_currentAcceptor","IsShared":true},"SharedFloatWaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(986.18396,283.815765)"},"ID":13,"Name":"Sequence","Instant":true,"AbortTypeabortType":"Both","Children":[{"Type":"CheckForBackflip","NodeData":{"Offset":"(-66.79834,143.894913)"},"ID":14,"Name":"Check
+        For Backflip","Instant":true,"SharedAcceptorHandlerAcceptorsHandler":{"Type":"SharedAcceptorHandler","Name":"_acceptorHandler","IsShared":true,"AcceptorHandlermValue":9},"SharedBackpackBackpack":{"Type":"SharedBackpack","Name":"_backpack","IsShared":true,"BackPackmValue":10}},{"Type":"DoBackflip","NodeData":{"Offset":"(133.333328,140)"},"ID":15,"Name":"Do
+        Backflip","Instant":true,"SharedAnimatorAnimator":{"Type":"SharedAnimator","Name":"_animator","IsShared":true,"AnimatormValue":11}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(1282.8678,399.573853)"},"ID":16,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0.1},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}}]}]},"Variables":[{"Type":"SharedAcceptorHandler","Name":"_acceptorHandler","IsShared":true,"AcceptorHandlermValue":12},{"Type":"SharedAcceptor","Name":"_currentAcceptor","IsShared":true},{"Type":"SharedNavMeshAgent","Name":"_navMeshAgent","IsShared":true,"NavMeshAgentmValue":13},{"Type":"SharedDispencersList","Name":"_dispencersList","IsShared":true,"List`1mValue":[14,15,16]},{"Type":"SharedDispencer","Name":"_currentDispencer","IsShared":true},{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"_waitTime","IsShared":true,"SinglemValue":0},{"Type":"SharedBackpack","Name":"_backpack","IsShared":true,"BackPackmValue":17},{"Type":"SharedAnimator","Name":"_animator","IsShared":true,"AnimatormValue":18}]}'
       fieldSerializationData:
         typeName: []
         fieldNameHash: 
@@ -1382,14 +1383,21 @@ MonoBehaviour:
         - {fileID: 439412991}
         - {fileID: 1120360331}
         - {fileID: 1599085510}
+        - {fileID: 953785228}
         - {fileID: 919132148279244262}
         - {fileID: 1443382553}
+        - {fileID: 953785228}
         - {fileID: 919132148279244262}
+        - {fileID: 1443382553}
+        - {fileID: 953785228}
+        - {fileID: 860943488}
         - {fileID: 1443382553}
         - {fileID: 919132148279244262}
         - {fileID: 439412991}
         - {fileID: 1120360331}
         - {fileID: 1599085510}
+        - {fileID: 953785228}
+        - {fileID: 860943488}
         byteData: 
         byteDataArray: 
       Version: 1.7.2
@@ -2914,10 +2922,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 5
+  m_Acceleration: 100
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 360
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1

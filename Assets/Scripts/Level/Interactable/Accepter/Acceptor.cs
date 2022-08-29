@@ -43,7 +43,9 @@ public class Acceptor : Interactable
 
     protected override void OnZoneExit(Player player)
     {
-        StopCoroutine(_placingCoroutine);
+        if (_placingCoroutine != null)
+            StopCoroutine(_placingCoroutine);
+
         player.UITimer.StopTimer();
     }
 
@@ -99,7 +101,6 @@ public class Acceptor : Interactable
         player.UITimer.StartTimer(PickUpTime);
 
         yield return new WaitForSeconds(PickUpTime);
-        Debug.Log("hi");
 
         if (player.Backpack.TryGetPickable(out Pickable pickable))
             TryPlace(pickable);
